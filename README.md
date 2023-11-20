@@ -4,6 +4,10 @@ Purpose Mode is an extension for Chromium-based browsers
 that allows you to browse the Web with purpose,
 free from distractions.
 
+## Example
+
+<img width="1196" alt="image" src="https://github.com/NullHypothesis/purpose-mode/assets/1316283/e0f3008b-7297-4efc-832a-bef2e34786fb">
+
 ## Installation
 
 Run the following:
