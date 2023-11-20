@@ -20,7 +20,7 @@ npm run build
 
 This should create the directory ./build/chrome-mv3-prod.
 Next, go to your browser's extension page
-(open [brave://extensions](brave://extensions)),
+(open chrome://extensions),
 activate "Developer mode" in the top right corner,
 and click on "Load unpacked" in the top left corner.
 Select the directory "chrome-mv3-prod" that you just built.
