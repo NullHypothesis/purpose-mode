@@ -51,7 +51,7 @@ function showSelectors(selectors: Array<JQuery>) {
 
 function getCurrentPage(): string {
     const currentWindowURL = window.location.href;
-    if (currentWindowURL.includes("https://twitter.com") ||
+    if (currentWindowURL.includes("https://x.com") ||
         currentWindowURL.includes("https://x.com")) {
         return constants.Twitter;
     }
@@ -70,7 +70,7 @@ function getCurrentPage(): string {
 
 function isHomePage(): boolean {
     const currentWindowURL = window.location.href;
-    if (currentWindowURL.includes("https://twitter.com/home") ||
+    if (currentWindowURL.includes("https://x.com/home") ||
         currentWindowURL.includes("https://x.com/home") ||
         currentWindowURL === "https://www.facebook.com/" ||
         currentWindowURL === "https://www.youtube.com/" || currentWindowURL === "https://www.youtube.com/?bp=wgUCEAE%3D" ||
@@ -104,7 +104,7 @@ function isYouTubeSearch(): boolean {
 function isAutoPlaySettingPage(): boolean {
     const currentWindowURL = window.location.href;
     if (currentWindowURL.includes("https://x.com/settings/autoplay") ||
-        currentWindowURL.includes("https://twitter.com/settings/autoplay") ||
+        currentWindowURL.includes("https://x.com/settings/autoplay") ||
         currentWindowURL.includes("https://www.linkedin.com/mypreferences/d/settings/autoplay-videos") ||
         currentWindowURL.includes("https://www.facebook.com/settings?tab=videos")
     ) {
@@ -119,7 +119,7 @@ function getContainer() {
     return new Promise((resolve) => {
         const currentWindowURL = window.location.href;
         // Twitter autoplay setting page
-        if (currentWindowURL.includes("https://twitter.com/settings/autoplay") ||
+        if (currentWindowURL.includes("https://x.com/settings/autoplay") ||
             currentWindowURL.includes("https://x.com/settings/autoplay")) {
             const y = document;
             resolve(y);
@@ -331,7 +331,7 @@ function resetInfScrolling(container: JQuery<HTMLElement>) {
 }
 
 function stopInfScrolling(container: JQuery<HTMLElement>) {
-    if (!window.location.href.includes("twitter")) {
+    if (!window.location.href.includes("x.com")) {
         if (!isHomePage()) {
             return;
         }
@@ -650,7 +650,7 @@ function onToggleTwitterNotif(toggled: boolean) {
 
 function onToggleTwitterFeed(toggled: boolean) {
     const currentWindow = window.location.href;
-    if (!currentWindow.includes("https://twitter.com/home") &&
+    if (!currentWindow.includes("https://x.com/home") &&
         !currentWindow.includes("https://x.com/home")) {
         return;
     }
